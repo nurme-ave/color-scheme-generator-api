@@ -114,6 +114,10 @@
   .submit-button {
     width: 15em;
   }
+
+  .submit-button {
+    height: 4em;
+  }
   
   .colors-and-hex-values > * {
     width: 20vw;
