@@ -103,8 +103,7 @@
 
   .color-picker {
     flex-direction: column;
-    gap: .75em;
-    padding: 1em;
+    gap: 1.5em;
   }
 
   .input-color {
@@ -115,7 +114,7 @@
   .submit-button {
     width: 15em;
   }
-
+  
   .colors-and-hex-values > * {
     width: 20vw;
   }
