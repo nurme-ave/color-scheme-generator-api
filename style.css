@@ -119,6 +119,10 @@
     width: 20vw;
   }
 
+  .color {
+    height: 20em;
+  }
+
   .hex-value {
     padding: 2em;
     font-size: .875rem;
