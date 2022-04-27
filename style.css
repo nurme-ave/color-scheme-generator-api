@@ -116,6 +116,8 @@
   }
 
   .submit-button {
+    font-size: 1rem;
+    text-transform: uppercase;
     height: 4em;
   }
   
