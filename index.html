@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Color Scheme Generator</title>
+</head>
+<body>
+  <main class="main-container">
+    <section class="section-container">
+
+      <div class="color-picker">
+        <div>
+          <label for="color-input"></label>
+          <input id="color-input" type="color" value="#ffffff" class="input-color">
+        </div>
+
+        <form>
+          <label for="options"></label>
+          <select id="options" name="options" class="select-color"></select>
+        </form>
+        
+        <button type="submit" class="submit-button">Get color scheme</button>
+      </div>
+
+      <div id="colors" class="colors-and-hex-values"></div>
+
+      <div id="hex-values" class="colors-and-hex-values"></div>
+      
+    </section>
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>
