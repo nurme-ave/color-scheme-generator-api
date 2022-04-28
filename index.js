@@ -75,37 +75,33 @@ function renderContent(collection) {
 }
 
 
-document.getElementById('colors').addEventListener('click', copyToClipboardRGB);
-document.getElementById('hex-values').addEventListener('click', copyToClipboardHEX);
+document.getElementById('colors').addEventListener('click', getValueRGB);
+document.getElementById('hex-values').addEventListener('click', getValueHEX);
 
-function copyToClipboardRGB(e) {
+function getValueRGB(e) {
   if (e.target.tagName === 'P') {
     const target = e.target.style.backgroundColor;
-    const textToCopy = target;
-    navigator.clipboard
-      .writeText(textToCopy)
-      .then(() => {
-        notifyUser();
-      })
-      .catch((err) => {
-        alert(err);
-      });
+    copyToClipboard(target);
   }
 }
 
-function copyToClipboardHEX(e) {
+function getValueHEX(e) {
   if (e.target.tagName === 'P') {
-    const target = e.target.textContent
-    const textToCopy = target;
-    navigator.clipboard
-      .writeText(textToCopy)
-      .then(() => {
-        notifyUser();
-      })
-      .catch((err) => {
-        alert(err);
-      });
+    const target = e.target.textContent;
+    copyToClipboard(target);
   }
+}
+
+function copyToClipboard(value) {
+  const textToCopy = value;
+  navigator.clipboard
+    .writeText(textToCopy)
+    .then(() => {
+      notifyUser();
+    })
+    .catch((err) => {
+      alert(err);
+  });
 }
 
 function notifyUser() {
