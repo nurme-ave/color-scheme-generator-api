@@ -60,25 +60,23 @@ document.querySelector('.submit-button').addEventListener('click', () => {
 
 /*
   Fetch data from the Color API. I'm using default parameters here so if there's
-  no user data (values) then by default we'll see the blue color scheme.
-  Pass data into the renderContent() as an argument.
+  no user data (values) then by default these parameters will be used.
+  After fetching the data I pass it into the renderContent() as an argument.
 */
-function fetchData(colorValue='#0000ff', mode='monochrome') {
-  fetch(`https://www.thecolorapi.com/scheme?hex=${colorValue.slice(1)}&mode=${mode}`)
+function fetchData(colorValue='#0000ff', mode='monochrome', format='json', count=5) {
+  fetch(`https://www.thecolorapi.com/scheme?hex=${colorValue.slice(1)}&format=${format}&mode=${mode}&count=${count}`)
   .then((response) => response.json())
   .then((data) => {
     renderContent(data);
   });
 }
 
-// Render the colors and their HEX values onto the page
+// Render the colors and HEX values onto the page
 function renderContent(collection) {
   let colorsHtml = '';
   let hexValuesHtml = '';
   for (let i = 0; i < collection.colors.length; i++) {
-    colorsHtml += `
-      <p class="color" style="background-color: ${collection.colors[i].hex.value};"></p>
-    `
+    colorsHtml += `<p class="color" style="background-color: ${collection.colors[i].hex.value};"></p>`
     hexValuesHtml += `<p class="hex-value">${collection.colors[i].hex.value}</p>`
   }
   colorsEl.innerHTML = colorsHtml;
@@ -102,8 +100,8 @@ function getValueHEX(e) {
 }
 
 // Copy the value to the clipboard
-function copyToClipboard(value) {
-  const textToCopy = value;
+function copyToClipboard(targetValue) {
+  const textToCopy = targetValue;
   navigator.clipboard
     .writeText(textToCopy)
     .then(() => {
