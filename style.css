@@ -88,6 +88,11 @@
   color: #D5D4D8;
 }
 
+.sidenote {
+  display: none;
+  font-size: 1rem;
+}
+
 
 @media screen and (max-width: 600px) {
   .main-container {
@@ -116,7 +121,7 @@
   }
 
   .submit-button {
-    font-size: 1rem;
+    font-size: 1.1rem;
     text-transform: uppercase;
     height: 4em;
   }
@@ -133,5 +138,9 @@
     padding: 2.5em;
     font-size: .875rem;
     border-bottom: 1px solid #D1D5DB;
+  }
+
+  .sidenote {
+    display: block;
   }
 }
