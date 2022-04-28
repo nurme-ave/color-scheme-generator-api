@@ -63,12 +63,10 @@ document.querySelector('.submit-button').addEventListener('click', () => {
   no user data (values) then by default these parameters will be used.
   After fetching the data I pass it into the renderContent() as an argument.
 */
-function fetchData(colorValue='#0000ff', mode='monochrome', format='json', count=5) {
-  fetch(`https://www.thecolorapi.com/scheme?hex=${colorValue.slice(1)}&format=${format}&mode=${mode}&count=${count}`)
-  .then((response) => response.json())
-  .then((data) => {
-    renderContent(data);
-  });
+async function fetchData(colorValue='#0000ff', mode='monochrome', format='json', count=5) {
+  const response = await fetch(`https://www.thecolorapi.com/scheme?hex=${colorValue.slice(1)}&format=${format}&mode=${mode}&count=${count}`)
+  const data = await response.json()
+  renderContent(data);
 }
 
 // Render the colors and HEX values onto the page
