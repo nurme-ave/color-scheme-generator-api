@@ -15,22 +15,20 @@ This is a personal project built by [Ave Nurme](https://www.avenurme.dev).
 
 ### Project Description
 
-This was my second solo project at the Scrimba's Frontend Developer Career Path. Solo project means that you are only provided with the Figma design file and a set of requirements you need to implement in the project. There is no hand-holding or a walk-through solution with the instructor. How you solve the challenge and implement the logic is completely up to you.
+This was my fourth solo project at the Scrimba's Frontend Developer Career Path. Solo project means that you are only provided with the Figma design file and a set of requirements you need to implement in the project. There is no hand-holding or a walk-through solution with the instructor. How you solve the challenge and implement the logic is completely up to you.
 
 A stretch goal in this project was to add 1-click-copy which was quite interesting to implement.
 
 More features I added myself:
-- user input and the instructions text next to it
-- when the user enters an invalid number the instructions text will turn red
-- the 'Clear password fields' button
+- when the user clicks on the color then the RGB value will be copied to the clipboard
+- when the user clicks on the color code then the HEX code will be copied to the clipboard
 - a hovering 'Copied!' text when the password has been copied on the clipboard
 
 New things learned:
-- generate an array of letters, numbers and symbols from the ASCII code by using String.fromCharCode()
-- write specified text string to the system clipboard (1-click-copy) with clipboard.writeText()
-- automatically add and remove classes using setTimeout()
+- retrieve data from an API
+- manipulate the data retrieved from the API
 
-The page is fully responsive.
+The page was built first for desktop and then I optimized it for mobile view.
 
 The code has been reviewed and approved by a Scrimba instructor.
 
