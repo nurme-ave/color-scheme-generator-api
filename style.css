@@ -130,7 +130,8 @@
   }
 
   .hex-value {
-    padding: 2em;
+    padding: 2.5em;
     font-size: .875rem;
+    border-bottom: 1px solid #D1D5DB;
   }
 }
