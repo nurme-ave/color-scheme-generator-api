@@ -74,5 +74,47 @@ function renderContent(collection) {
   document.getElementById('hex-values').innerHTML = hexValuesHtml;
 }
 
+
+document.getElementById('colors').addEventListener('click', copyToClipboardRGB);
+document.getElementById('hex-values').addEventListener('click', copyToClipboardHEX);
+
+function copyToClipboardRGB(e) {
+  if (e.target.tagName === 'P') {
+    const target = e.target.style.backgroundColor;
+    const textToCopy = target;
+    navigator.clipboard
+      .writeText(textToCopy)
+      .then(() => {
+        notifyUser();
+      })
+      .catch((err) => {
+        alert(err);
+      });
+  }
+}
+
+function copyToClipboardHEX(e) {
+  if (e.target.tagName === 'P') {
+    const target = e.target.textContent
+    const textToCopy = target;
+    navigator.clipboard
+      .writeText(textToCopy)
+      .then(() => {
+        notifyUser();
+      })
+      .catch((err) => {
+        alert(err);
+      });
+  }
+}
+
+function notifyUser() {
+  const notificationText = document.querySelector('.notification-text');
+  notificationText.classList.add('copied');
+  setTimeout(() => {
+    notificationText.classList.remove('copied');
+  }, 1000);
+}
+
 renderOptions();
 fetchData();
