@@ -67,6 +67,7 @@
   justify-content: center;
   align-items: center;
   color: #fff;
+  cursor: pointer;
 }
 
 .colors-and-hex-values > * {
@@ -91,6 +92,8 @@
 .sidenote {
   display: none;
   font-size: 1rem;
+  text-align: center;
+  color: #D1D5DB;
 }
 
 
@@ -137,7 +140,6 @@
   .hex-value {
     padding: 2.5em;
     font-size: .875rem;
-    border-bottom: 1px solid #D1D5DB;
   }
 
   .sidenote {
