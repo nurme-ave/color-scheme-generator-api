@@ -116,6 +116,10 @@
   visibility: visible;
 }
 
+.no-select {
+  -webkit-tap-highlight-color: transparent;
+}
+
 @keyframes copied {
   0% {
     opacity: 0;
