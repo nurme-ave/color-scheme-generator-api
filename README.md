@@ -25,7 +25,7 @@ More features I added myself:
 - a hovering 'Copied!' text when the password has been copied on the clipboard
 
 New things learned:
-- retrieve data from an API
+- retrieve data from an API utilizing fetch()
 - manipulate the data retrieved from the API
 
 The page was built first for desktop and then I optimized it for mobile view.
@@ -34,11 +34,11 @@ The code has been reviewed and approved by a Scrimba instructor.
 
 ### Screenshot
 
-![Screenshot of my solution](/random-password-generator.png)
+![Screenshot of my solution](/color-scheme-generator-screenshot.png)
 
 ### Links
 
-- Live Site URL: [GitHub Pages](https://nurme-ave.github.io/scrimba-solo-project-random-password-generator/)
+- Live Site URL: [GitHub Pages](https://nurme-ave.github.io/scrimba-solo-project-color-scheme-generator-api/)
 
 ### Built with
 

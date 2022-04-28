@@ -18,6 +18,17 @@ window.addEventListener('resize', () => {
 });
 
 
+/*
+  START OF THE APP
+*/
+
+const colorsEl = document.getElementById('colors');
+const hexValuesEl = document.getElementById('hex-values');
+
+colorsEl.addEventListener('click', getValueRGB);
+hexValuesEl.addEventListener('click', getValueHEX);
+
+// Options in the SELECT tag
 const optionsArr = [
   'monochrome',
   'monochrome-dark',
@@ -60,7 +71,7 @@ function fetchData(colorValue='#0000ff', mode='monochrome') {
   });
 }
 
-// Render the colors and HEX values onto the page
+// Render the colors and their HEX values onto the page
 function renderContent(collection) {
   let colorsHtml = '';
   let hexValuesHtml = '';
@@ -70,14 +81,11 @@ function renderContent(collection) {
     `
     hexValuesHtml += `<p class="hex-value">${collection.colors[i].hex.value}</p>`
   }
-  document.getElementById('colors').innerHTML = colorsHtml;
-  document.getElementById('hex-values').innerHTML = hexValuesHtml;
+  colorsEl.innerHTML = colorsHtml;
+  hexValuesEl.innerHTML = hexValuesHtml;
 }
 
-
-document.getElementById('colors').addEventListener('click', getValueRGB);
-document.getElementById('hex-values').addEventListener('click', getValueHEX);
-
+// Get the RGB value when the color is clicked
 function getValueRGB(e) {
   if (e.target.tagName === 'P') {
     const target = e.target.style.backgroundColor;
@@ -85,6 +93,7 @@ function getValueRGB(e) {
   }
 }
 
+// Get the HEX code when the color code is clicked
 function getValueHEX(e) {
   if (e.target.tagName === 'P') {
     const target = e.target.textContent;
@@ -92,6 +101,7 @@ function getValueHEX(e) {
   }
 }
 
+// Copy the value to the clipboard
 function copyToClipboard(value) {
   const textToCopy = value;
   navigator.clipboard
@@ -104,6 +114,7 @@ function copyToClipboard(value) {
   });
 }
 
+// Notify the user that the data has been copied
 function notifyUser() {
   const notificationText = document.querySelector('.notification-text');
   notificationText.classList.add('copied');
