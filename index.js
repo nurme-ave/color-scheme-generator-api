@@ -55,7 +55,7 @@ function renderOptions() {
 document.querySelector('.submit-button').addEventListener('click', () => {
   const colorValue = document.getElementById('color-input').value;
   const optionValue = document.getElementById('options').value;
-  fetchData(colorValue, optionValue)
+  fetchData(colorValue, optionValue);
 })
 
 /*
@@ -64,9 +64,19 @@ document.querySelector('.submit-button').addEventListener('click', () => {
   After fetching the data I pass it into the renderContent() as an argument.
 */
 async function fetchData(colorValue='#0000ff', mode='monochrome', format='json', count=5) {
-  const response = await fetch(`https://www.thecolorapi.com/scheme?hex=${colorValue.slice(1)}&format=${format}&mode=${mode}&count=${count}`)
-  const data = await response.json()
-  renderContent(data);
+  try {
+    const response = await fetch(`https://www.thecolorapi.com/scheme?hex=${colorValue.slice(1)}&format=${format}&mode=${mode}&count=${count}`);
+    const data = await response.json();
+    renderContent(data);
+  } catch (err) {
+    console.error(err);
+    colorsEl.innerHTML = 
+    `<p class="error-message">
+      So sorry! Some kind of error occurred :(
+      <span>Please refresh the page. If the problem persists, please let us know</span>
+      <span class="error-message-email">error.messages@example.com</span>
+    </p>`
+  }
 }
 
 // Render the colors and HEX values onto the page

@@ -26,7 +26,7 @@ More features I added myself:
 
 New things learned:
 - retrieve data from an API utilizing fetch()
-- utilize async and await instead of .then
+- utilize async and await instead of .then()
 - manipulate the data retrieved from the API
 
 The page was built first for desktop and then I optimized it for mobile view.

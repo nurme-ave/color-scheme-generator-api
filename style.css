@@ -132,6 +132,22 @@
   }
 }
 
+.error-message {
+  width: 85%;
+  padding: 2em 0;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.error-message span {
+  display: block;
+}
+
+.error-message-email {
+  padding-top: 1em;
+  color: blue;
+}
+
 
 @media screen and (max-width: 600px) {
   .main-container {
@@ -180,5 +196,14 @@
 
   .sidenote {
     display: block;
+  }
+
+  .error-message {
+    width: 90%;
+  }
+
+  .error-message-email {
+    padding-bottom: 3em;
+    border-bottom: 1px solid #D5D4D8;
   }
 }
