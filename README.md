@@ -15,7 +15,7 @@ This is a personal project built by [Ave Nurme](https://www.avenurme.dev).
 
 ### Project Description
 
-This was my fourth solo project at the Scrimba's Frontend Developer Career Path. Solo project means that you are only provided with the Figma design file and a set of requirements you need to implement in the project. There is no hand-holding or a walk-through solution with the instructor. How you solve the challenge and implement the logic is completely up to you.
+This was my fourth solo project at the Scrimba's Frontend Developer Career Path. Solo project means that you are only provided with a set of requirements you need to implement in the project. There is no hand-holding or a walk-through solution with the instructor and you're on your own.
 
 A stretch goal in this project was to add 1-click-copy which was quite interesting to implement.
 
@@ -29,13 +29,13 @@ New things learned:
 - utilize async and await instead of .then()
 - manipulate the data retrieved from the API
 
-The page was built first for desktop and then I optimized it for mobile view.
+The page has been built with mobile-first design in mind and is fully responsive.
 
 The code has been reviewed and approved by a Scrimba instructor.
 
 ### Screenshot
 
-![Screenshot of my solution](/color-scheme-generator-screenshot.png)
+![Screenshot of my solution](/color-scheme-generator-screenshot-api_760.png)
 
 ### Links
 
