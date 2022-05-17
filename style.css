@@ -356,6 +356,10 @@
     bottom: 42%;
     transform: translateX(-50%);
   }
+
+  .error-message {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 1600px) {

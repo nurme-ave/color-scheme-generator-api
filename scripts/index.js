@@ -51,6 +51,9 @@ function renderOptions() {
 */
 document.querySelector('.submit-button').addEventListener('click', () => {
   const colorValue = document.getElementById('color-input').value;
+  console.log(colorValue)
+  // document.querySelector('.intro').style.color = '#000';
+  // document.querySelector('.section-container').style.backgroundColor = '#fff';
   const optionValue = document.getElementById('options').value;
   fetchData(colorValue, optionValue);
 })
@@ -64,8 +67,9 @@ async function fetchData(colorValue='#0000ff', mode='monochrome', format='json',
   try {
     const response = await fetch(`https://www.thecolorapi.com/scheme?hex=${colorValue.slice(1)}&format=${format}&mode=${mode}&count=${count}`);
     const data = await response.json();
-    console.log(data)
-    renderContent(data);
+    // const newBkgColor = data.seed.contrast.value;
+    // document.querySelector('.section-container').style.backgroundColor = newBkgColor;
+    renderContent(data, newBkgColor);
   } catch (err) {
     console.error(err);
     colorsEl.innerHTML = 
@@ -78,7 +82,8 @@ async function fetchData(colorValue='#0000ff', mode='monochrome', format='json',
 }
 
 // Render the colors and HEX values onto the page
-function renderContent(collection) {
+function renderContent(collection, bkgColor) {
+  
   let colorsHtml = '';
   let hexValuesHtml = '';
   for (let i = 0; i < collection.colors.length; i++) {
@@ -87,6 +92,7 @@ function renderContent(collection) {
   }
   colorsEl.innerHTML = colorsHtml;
   hexValuesEl.innerHTML = hexValuesHtml;
+  document.querySelector('.section-container').style.backgroundColor = bkgColor;
 }
 
 renderOptions();
