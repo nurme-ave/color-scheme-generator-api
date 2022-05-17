@@ -9,6 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>Color Scheme Generator API</title>
+  <script defer src="scripts/index.js"></script>
+  <script defer src="scripts/clipboard.js"></script>
 </head>
 <body>
   <main>
@@ -29,18 +31,21 @@
             </div>
             <form>
               <label for="options"></label>
-              <select id="options" name="options" class="select-color"></select>
+              <select id="options" name="options" class="select-color-mode"></select>
             </form>
             <button type="submit" class="submit-button">Get color scheme</button>
           </div>
           
-          <div id="colors" class="colors-and-hex-values no-select"></div>
-          <div id="hex-values" class="colors-and-hex-values no-select"></div>
+          <div id="colors" class="colors-and-hex-values no-select" title="Click to copy the RGB value"></div>
+          <div>
+            <div id="color-names" class="colors-and-hex-values color-names"></div>
+            <div id="hex-values" class="colors-and-hex-values no-select" title="Click to copy the HEX code"></div>
+          </div>
           <p class="notification-text">Copied!</p>
           
           <div class="sidenotes">
-            <p>Click on the color to copy the RGB value.</p>
-            <p>Click on the color code to copy the HEX code.</p>
+            <p>Tap on the color to copy the RGB value.</p>
+            <p>Tap on the color code to copy the HEX code.</p>
           </div>
         </div>
       </div>
@@ -48,7 +53,5 @@
     </section>
 
   </main>
-  <script src="scripts/index.js"></script>
-  <script src="scripts/clipboard.js"></script>
 </body>
 </html>
