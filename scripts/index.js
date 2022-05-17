@@ -64,6 +64,7 @@ async function fetchData(colorValue='#0000ff', mode='monochrome', format='json',
   try {
     const response = await fetch(`https://www.thecolorapi.com/scheme?hex=${colorValue.slice(1)}&format=${format}&mode=${mode}&count=${count}`);
     const data = await response.json();
+    console.log(data)
     renderContent(data);
   } catch (err) {
     console.error(err);
