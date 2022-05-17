@@ -286,9 +286,7 @@ select {
   }
 
   .notification-text {
-    left: 50%;
     bottom: 55%;
-    transform: translateX(-50%);
   }
 }
 
@@ -368,9 +366,7 @@ select {
   }
 
   .notification-text {
-    left: 50%;
     bottom: 45%;
-    transform: translateX(-50%);
   }
 
   .error-message {
