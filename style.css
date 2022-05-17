@@ -85,7 +85,7 @@
   padding-top: 4em;
 }
 
-.select-color-mode[type='color'] {
+select {
   padding: 3em;
 }
 
@@ -148,24 +148,24 @@
 
 .color-names {
   display: none;
-  justify-content: center;
-  align-items: center;
   margin-bottom: .25em;
   padding: 0 0.15em;
   text-align: center;
-  font-size: .875rem;
-  font-weight: 500;
   cursor: default;
 }
 
 .hex-value {
   display: flex;
+  text-transform: lowercase;
+  color: #020024;
+}
+
+.color-names,
+.hex-value {
   justify-content: center;
   align-items: center;
   font-size: .875rem;
   font-weight: 500;
-  text-transform: lowercase;
-  color: #020024;
 }
 
 .sidenotes {
@@ -190,7 +190,7 @@
   visibility: hidden;
   padding: 1em 1.5em;
   font-size: 1.2rem;
-  font-weight: 800;
+  font-weight: 600;
   border: 1px solid #000;
   border-radius: 0.5em;
   color: #000;
@@ -277,7 +277,6 @@
     display: flex;
   }
 
-  /* .hex-value, */
   .sidenotes {
     font-size: 1rem;
   }
@@ -301,10 +300,6 @@
   .support-text {
     font-size: 2.5rem;
   }
-
-  /* .hex-value {
-    font-size: 1rem;
-  } */
 }
 
 @media screen and (min-width: 1440px) {
@@ -365,7 +360,6 @@
   }
 
   .hex-value {
-    /* font-size: 1rem; */
     padding-bottom: 2em;
   }
 
@@ -415,12 +409,12 @@
     height: 30em;
   }
 
-  .color-names {
+  .color-names,
+  .hex-value {
     font-size: 1rem;
   }
 
   .hex-value {
-    font-size: 1rem;
     padding-bottom: 3em;
   }
 }
