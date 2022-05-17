@@ -69,7 +69,7 @@ async function fetchData(colorValue='#0000ff', mode='monochrome', format='json',
     const data = await response.json();
     // const newBkgColor = data.seed.contrast.value;
     // document.querySelector('.section-container').style.backgroundColor = newBkgColor;
-    renderContent(data, newBkgColor);
+    renderContent(data);
   } catch (err) {
     console.error(err);
     colorsEl.innerHTML = 
@@ -82,7 +82,7 @@ async function fetchData(colorValue='#0000ff', mode='monochrome', format='json',
 }
 
 // Render the colors and HEX values onto the page
-function renderContent(collection, bkgColor) {
+function renderContent(collection) {
   
   let colorsHtml = '';
   let hexValuesHtml = '';
@@ -92,7 +92,7 @@ function renderContent(collection, bkgColor) {
   }
   colorsEl.innerHTML = colorsHtml;
   hexValuesEl.innerHTML = hexValuesHtml;
-  document.querySelector('.section-container').style.backgroundColor = bkgColor;
+  // document.querySelector('.section-container').style.backgroundColor = bkgColor;
 }
 
 renderOptions();
