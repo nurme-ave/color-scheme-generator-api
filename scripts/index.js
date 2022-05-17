@@ -49,12 +49,14 @@ function renderOptions() {
 }
 
 /*
-  Get values of user input when clicking the submit button and
-  pass them into fetchData() as arguments
+  Get the color value and color mode from the user when submitting
+  the form after which pass the data into fetchData() as arguments
 */
-document.querySelector('.submit-button').addEventListener('click', () => {
+document.querySelector('.form').addEventListener('submit', (e) => {
+  e.preventDefault();
   colorValue = document.getElementById('color-input').value;
   const optionMode = document.getElementById('options').value;
+
   fetchData(colorValue, optionMode);
 })
 

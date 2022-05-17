@@ -76,13 +76,17 @@
   background-color: #fff;
 }
 
-.color-picker {
+.form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2em;
   padding-top: 4em;
+}
+
+.select-color-mode[type='color'] {
+  padding: 3em;
 }
 
 .input-color,
@@ -249,7 +253,7 @@
     gap: 4em;
   }
 
-  .color-picker {
+  .form {
     flex-direction: row;
   }
 
@@ -329,7 +333,7 @@
     border-radius: .375em;
   }
 
-  .color-picker {
+  .form {
     gap: 2em;
     padding: 2.5em 0 0;
   }
@@ -402,7 +406,7 @@
     gap: 3em;
   }
 
-  .color-picker {
+  .form {
     gap: 3em;
     padding: 3em 0 0;
   }
