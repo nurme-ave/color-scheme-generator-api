@@ -7,10 +7,11 @@ let newBkgColor;
   no user data (values) then by default these parameters will be used.
   After fetching the data I pass it into the renderContent() as an argument.
 */
-async function fetchData(colorValue='#0000ff', mode='monochrome', format='json', count=5) {
+async function fetchData(colorValue='#390099', mode='monochrome', format='json', count=5) {
   try {
     const response = await fetch(`https://www.thecolorapi.com/scheme?hex=${colorValue.slice(1)}&format=${format}&mode=${mode}&count=${count}`);
     const data = await response.json();
+    console.log(data)
     newBkgColor = data.seed.contrast.value;
     renderContent(data);
   } catch (err) {
