@@ -11,7 +11,6 @@ async function fetchData(colorValue='#020024', mode='monochrome', format='json',
   try {
     const response = await fetch(`https://www.thecolorapi.com/scheme?hex=${colorValue.slice(1)}&format=${format}&mode=${mode}&count=${count}`);
     const data = await response.json();
-    console.log(data)
     newBkgColor = data.seed.contrast.value;
     renderContent(data);
   } catch (err) {
