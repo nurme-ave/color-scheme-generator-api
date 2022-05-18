@@ -1,3 +1,7 @@
+:root {
+  --fadeIn-animation: linear 2.5s forwards .5s;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -23,6 +27,19 @@
   justify-content: center;
   align-items: center;
   padding: 4em 2em;
+  opacity: 0;
+  animation: fadeInIntro var(--fadeIn-animation);
+}
+
+@keyframes fadeInIntro {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }
 
 .main-heading {
@@ -66,6 +83,19 @@
   justify-content: center;
   align-items: center;
   width: 100vw;
+  opacity: 0;
+  animation: fadeInContent var(--fadeIn-animation);
+}
+
+@keyframes fadeInContent {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }
 
 .color-generator {
