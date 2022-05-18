@@ -1,3 +1,5 @@
+import { colorsEl, hexValuesEl } from './render-content.js';
+
 colorsEl.addEventListener('click', getValueRGB);
 hexValuesEl.addEventListener('click', getValueHEX);
 
