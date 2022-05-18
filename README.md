@@ -19,10 +19,14 @@ This was my fourth solo project at the Scrimba's Frontend Developer Career Path.
 
 A stretch goal in this project was to add 1-click-copy which was quite interesting to implement.
 
-More features I added myself:
+Features I added myself:
+- added a cool fade-in animation effect to both the text panel and the color generator panel
+- in addition to HEX values I'm also fetching and displaying the names of the colors
+- based on user's color choice I'm changing the colors of the text accordingly
+- based on user's color choice I'm also changing the background color to either black or white
 - when the user clicks on the color then the RGB value will be copied to the clipboard
 - when the user clicks on the color code then the HEX code will be copied to the clipboard
-- a hovering 'Copied!' text when the password has been copied on the clipboard
+- a hovering 'Copied!' text when the color value/code has been copied onto the clipboard
 
 New things learned:
 - retrieve data from an API utilizing fetch()
