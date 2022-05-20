@@ -26,7 +26,7 @@ function renderOptions() {
   Get the color value and color mode from the user when submitting
   the form and pass the data into fetchData() as arguments
 */
-document.querySelector('.form').addEventListener('submit', (e) => {
+document.getElementById('form').addEventListener('submit', (e) => {
   e.preventDefault();
   
   colorValue = document.getElementById('color-input').value;

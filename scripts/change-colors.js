@@ -9,7 +9,7 @@ import { colorValue } from './index.js';
   and noisy :)
 */
 function changeColors() {
-  const colorGeneratorEl = document.querySelector('.color-generator');
+  const colorGeneratorEl = document.getElementById('color-generator');
   const getAllClasses = document.querySelectorAll('.accent-text, .intro p, .sidenotes');
 
   if (newBkgColor === '#ffffff') {

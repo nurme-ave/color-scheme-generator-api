@@ -34,7 +34,7 @@ function copyToClipboard(targetValue) {
 
 // Notify the user that the data has been copied
 function notifyUser() {
-  const notificationText = document.querySelector('.notification-text');
+  const notificationText = document.getElementById('notification-text');
   notificationText.classList.add('copied');
   setTimeout(() => {
     notificationText.classList.remove('copied');
