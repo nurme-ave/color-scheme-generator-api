@@ -17,21 +17,16 @@ This is a personal project built by [Ave Nurme](https://www.avenurme.dev).
 
 This was my fourth solo project at the Scrimba's Frontend Developer Career Path. Solo project means that you are only provided with a set of requirements you need to implement in the project. There is no hand-holding or a walk-through solution with the instructor and you're on your own.
 
-A stretch goal in this project was to add 1-click-copy which was quite interesting to implement.
-
 Features I added myself:
 - added a cool fade-in animation effect to both the text panel and the color generator panel
 - in addition to HEX values I'm also fetching and displaying the names of the colors
 - based on user's color choice I'm changing the colors of the text accordingly
 - based on user's color choice I'm also changing the background color to either black or white
-- when the user clicks on the color then the RGB value will be copied to the clipboard
-- when the user clicks on the color code then the HEX code will be copied to the clipboard
+- when the user clicks on the color or color code then the RGB value or HEX code will be copied onto the clipboard, respectively
 - a hovering 'Copied!' text when the color value/code has been copied onto the clipboard
 
 New things learned:
-- retrieve data from an API utilizing fetch()
 - utilize async and await instead of .then()
-- manipulate the data retrieved from the API
 
 The page has been built with mobile-first design in mind and is fully responsive.
 
