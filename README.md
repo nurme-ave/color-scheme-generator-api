@@ -34,7 +34,7 @@ The code has been reviewed and approved by a Scrimba instructor.
 
 ### Screenshot
 
-![Screenshot of my solution](/color-scheme-generator-api_760.png)
+![Screenshot of my solution](/images/color-scheme-generator-api_760.png)
 
 ### Links
 
