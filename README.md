@@ -33,7 +33,7 @@ The page has been built with mobile-first design in mind and is fully responsive
 
 ### Links
 
-- Live Site URL: [GitHub Pages](https://nurme-ave.github.io/scrimba-solo-project-color-scheme-generator-api/)
+- Live Site URL: [GitHub Pages](https://nurme-ave.github.io/color-scheme-generator-api/)
 
 ### Built with
 
