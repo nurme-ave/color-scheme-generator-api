@@ -1,4 +1,4 @@
-# Color Scheme Generator API - Solo Project 4 at Scrimba
+# Color Scheme Generator API
 
 This is a personal project built by [Ave Nurme](https://www.avenurme.dev).
 
@@ -15,22 +15,17 @@ This is a personal project built by [Ave Nurme](https://www.avenurme.dev).
 
 ### Project Description
 
-This was my fourth solo project at the Scrimba's Frontend Developer Career Path. Solo project means that you are only provided with a set of requirements you need to implement in the project. There is no hand-holding or a walk-through solution with the instructor and you're on your own.
+In this JavaScript project I'm utilizing async & await for fetching data from the Color API.
 
-Features I added myself:
-- added a cool fade-in animation effect to both the text panel and the color generator panel
-- in addition to HEX values I'm also fetching and displaying the names of the colors
-- based on user's color choice I'm changing the colors of the text accordingly
-- based on user's color choice I'm also changing the background color to either black or white
-- when the user clicks on the color or color code then the RGB value or HEX code will be copied onto the clipboard, respectively
-- a hovering 'Copied!' text when the color value/code has been copied onto the clipboard
+I broke up my code into 5 separate files to make it modular. This helps to keep things more organized, reuse the code, and it's easier to make changes to the code if necessary.
 
-New things learned:
-- utilize async and await instead of .then()
+Based on the user's color choice I'm doing 2 things here: a) changing the colors of the text on the left panel, b) changing the background color of the website either to black or white.
+
+When the user clicks on the color or color code then the RGB value or HEX code will be copied onto the clipboard (1-click-copy), respectively. A hovering 'Copied!' text will also appear on the screen after copying.
+
+I also added a cool fade-in animation effect to both the text panel and the color generator panel.
 
 The page has been built with mobile-first design in mind and is fully responsive.
-
-The code has been reviewed and approved by a Scrimba instructor.
 
 ### Screenshot
 
