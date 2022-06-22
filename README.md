@@ -15,9 +15,11 @@ This is a personal project built by [Ave Nurme](https://www.avenurme.dev).
 
 ### Project Description
 
+Not sure what colors to pick for your next web app? Search no more! Here's a color picker for you :)
+
 In this JavaScript project I'm utilizing async & await for fetching data from the Color API.
 
-I broke up my code into 5 separate files to make it modular. This helps to keep things more organized, reuse the code, and it's easier to make changes to the code if necessary.
+I've also broken up my code into 5 separate files to make it modular. This helps to keep things more organized, reuse the code, and it's easier to make changes to the code if necessary.
 
 Based on the user's color choice I'm doing 2 things here: a) changing the colors of the text on the left panel, b) changing the background color of the website either to black or white.
 
