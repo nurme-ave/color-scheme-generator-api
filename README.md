@@ -35,7 +35,7 @@ The page has been built with mobile-first design in mind and is fully responsive
 
 ### Links
 
-- Live Site URL: [Vercel](color-scheme-generator-api.vercel.app)
+- Live Site URL: [Vercel](https://color-scheme-generator-api.vercel.app/)
 
 ### Built with
 
